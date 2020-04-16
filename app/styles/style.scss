@@ -63,6 +63,20 @@ form {
   padding: 0;
 }
 
+.voting-button {
+  margin-right: 5px;
+  background: white;
+  border-radius: 5px;
+  width: 30px;
+  border: 1px solid rgba(105, 58, 250, 0.7);
+  height: 25px;
+}
+
+.voting-time {
+  color: grey;
+  display: inline;
+}
+
 .button {
   display: inline-block;
   font-size: 0.875rem;

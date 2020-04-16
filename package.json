@@ -43,8 +43,9 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.7.7",
+    "@babel/runtime": "^7.9.2",
     "@reduxjs/toolkit": "^1.2.2",
+    "babel-runtime": "^6.26.0",
     "cabal-client": "3.0.0",
     "collect-stream": "^1.2.1",
     "dat-encoding": "^5.0.1",

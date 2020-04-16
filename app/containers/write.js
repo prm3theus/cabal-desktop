@@ -206,6 +206,10 @@ class writeScreen extends Component {
     }
   }
 
+  toggleVote () {
+    console.log('begin vote')
+  }
+
   toggleEmojiPicker () {
     this.props.emojiPickerVisible ? this.props.hideEmojiPicker() : this.props.showEmojiPicker()
   }
@@ -256,7 +260,8 @@ class writeScreen extends Component {
             ref={(el) => { this.emojiPicker = el }}
             style={{ position: 'absolute', bottom: '100px', right: '16px', display: this.props.emojiPickerVisible ? 'block' : 'none' }}
             onClick={this.onClickEmojiPickerContainer.bind(this)}
-          >
+          > 
+
             <Picker
               onSelect={(e) => this.addEmoji(e)}
               native
@@ -266,6 +271,7 @@ class writeScreen extends Component {
               title='Pick an emoji...'
             />
           </div>
+          <button className="voting-button" onClick={(e) => this.toggleVote()}>✌</button>
           <div className='composer__other' onClick={(e) => this.toggleEmojiPicker()}><img src='static/images/icon-composerother.svg' /></div>
         </div>
       </div>

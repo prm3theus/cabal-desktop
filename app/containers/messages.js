@@ -57,8 +57,15 @@ export default function MessagesContainer (props) {
                 </div>
                 <div className='messages__item__metadata'>
                   {repeatedAuthor ? null : <div className='messages__item__metadata__name'>{message.author || message.key.substr(0, 6)}{renderDate(enriched.time)}</div>}
+                  
                   <div className={repeatedAuthor ? 'text indent' : 'text'}>
                     {enriched.content}
+                  </div>
+                {/*todo place in chat/fork else, make another component*/}
+                  <div className='voting_button_group'>
+                    <button className="voting-button" onClick={(e) => this.voteYes()}>➕</button>
+                    <button className="voting-button" onClick={(e) => this.voteNo()}>❌</button>
+                    <p className="voting-time">12:30 'till fork → <bold>#better-place</bold></p>
                   </div>
                 </div>
               </div>
@@ -78,6 +85,9 @@ export default function MessagesContainer (props) {
                 </div>
               </div>
             )
+          }
+          if (message.type === 'chat/fork') {
+
           }
           return (
             <div key={message.time + message.key}>
